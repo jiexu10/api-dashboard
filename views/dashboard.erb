@@ -1,0 +1,59 @@
+<div class="row columns">
+  <div class="small-4 columns">
+    <div class="callout primary ip">
+      <h3>IP</h3>
+      <p>"<%= @ip %>"</p>
+    </div>
+  </div>
+
+  <div class="small-4 columns">
+    <div class="callout primary location">
+      <h3>Location</h3>
+      <p>
+        <%= @geolocation.city %>,
+        <%= @geolocation.state %>,
+        <%= @geolocation.country %>
+      </p>
+    </div>
+  </div>
+
+  <div class="small-4 columns">
+    <div class="callout primary weather" id="weather">
+      <h3>Weather</h3>
+      <p>
+        <%= @weather.weather_conditions %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row columns">
+  <div class="small-12 columns">
+    <div class="callout primary events" id="events">
+      <h3>Events</h3>
+      <% @events.show_events.each do |event| %>
+        <p>
+          <%= event %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="callout primary news" id="news">
+      <h3>News</h3>
+      <% @top_stories.top_stories_titles.each do |story| %>
+        <p>
+          <%= story %>
+        </p>
+      <% end %>
+    </div>
+
+    <div class="callout primary movies" id="movies">
+      <h3>Movies</h3>
+      <% @movies.showtimes.each do |showtime| %>
+        <p>
+          <%= showtime %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
